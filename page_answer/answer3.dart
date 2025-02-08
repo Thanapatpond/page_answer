@@ -5,12 +5,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('SHARK SPEED'),
+          title: const Text('SHARK SPEED'),
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 249, 157, 20),
         ),
@@ -24,14 +26,14 @@ class MyApp extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
                 color: Colors.grey[300],
-                child: Center(
+                child: const Center(
                   child: Text(
                     'หมวดหมู่ : New R15/MT15 ',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-              SizedBox(height: 20), // ระยะห่างระหว่างส่วนหัวกับสินค้า
+              const SizedBox(height: 20), // ระยะห่างระหว่างส่วนหัวกับสินค้า
 
               // ส่วนรายการสินค้า
               Expanded(
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
                         '฿250',
                       ),
                     ),
-                    SizedBox(height: 16), // ระยะห่างระหว่างบล็อค
+                    const SizedBox(height: 16), // ระยะห่างระหว่างบล็อค
 
                     _buildProductRow(
                       _buildProductCard(
@@ -91,7 +93,7 @@ class MyApp extends StatelessWidget {
             color: Colors.grey.withOpacity(0.2),
             blurRadius: 5.0,
             spreadRadius: 2.0,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -105,19 +107,19 @@ class MyApp extends StatelessWidget {
             height: 150,
             fit: BoxFit.cover,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             productName,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center, // ข้อความชิดกลาง
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             price,
-            style: TextStyle(
-              color: const Color.fromARGB(255, 216, 90, 32),
+            style: const TextStyle(
+              color: Color.fromARGB(255, 216, 90, 32),
               fontSize: 16,
             ),
           ),

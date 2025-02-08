@@ -5,16 +5,18 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80), // Set the height of the AppBar
+          preferredSize: const Size.fromHeight(80), // Set the height of the AppBar
           child: Container(
             color: Colors.orange, // Set the orange color
             child: AppBar(
-              title: Text('Grid Layout'),
+              title: const Text('Grid Layout'),
               centerTitle: true,
               backgroundColor: Colors.transparent, // Make the AppBar background transparent
             ),
@@ -30,20 +32,20 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(width: 100, height: 100, color: Colors.red),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Container(width: 100, height: 100, color: Colors.green),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Container(width: 100, height: 100, color: Colors.blue),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(width: 100, height: 100, color: Colors.orange),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Container(width: 100, height: 100, color: Colors.purple),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Container(width: 100, height: 100, color: Colors.yellow),
                   ],
                 ),
@@ -54,3 +56,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}

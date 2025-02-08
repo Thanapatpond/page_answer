@@ -5,16 +5,18 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80), // Set the height of the AppBar
+          preferredSize: const Size.fromHeight(80), // Set the height of the AppBar
           child: Container(
             color: Colors.orange, // Set the orange color
             child: AppBar(
-              title: Text('Social Media Post'),
+              title: const Text('Social Media Post'),
               centerTitle: true,
               backgroundColor: Colors.transparent, // Make the AppBar background transparent
             ),
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
                       Container(
                         width: 50,
                         height: 50,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
                             image: AssetImage('assets/profile.jpg'), // ใช้รูปโปรไฟล์ของคุณ
@@ -42,8 +44,8 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 20),
-                      Column(
+                      const SizedBox(width: 20),
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('User Name', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -52,21 +54,21 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   
                   // แถวที่สอง: รูปภาพโพสต์
                   Container(
                     width: double.infinity,
                     height: 200,
                     color: Colors.grey[300], // สีเทาสำหรับรูปภาพโพสต์
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Image Post',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   
                   // แถวที่สาม: ปุ่ม Like, Comment, Share
                   Row(
@@ -74,15 +76,15 @@ class MyApp extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text('Like'),
+                        child: const Text('Like'),
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text('Comment'),
+                        child: const Text('Comment'),
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text('Share'),
+                        child: const Text('Share'),
                       ),
                     ],
                   ),
@@ -96,7 +98,7 @@ class MyApp extends StatelessWidget {
                 child: Container(
                   width: 50,
                   height: 50,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.blue, // สีฟ้าสำหรับวงกลม
                   ),

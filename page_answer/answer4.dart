@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,15 +16,17 @@ class MyApp extends StatelessWidget {
 }
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80), // Set the height of the AppBar
+          preferredSize: const Size.fromHeight(80), // Set the height of the AppBar
           child: Container(
             color: Colors.orange, // Set the orange color
             child: AppBar(
-              title: Text('Profile Page'),
+              title: const Text('Profile Page'),
               centerTitle: true,
               backgroundColor: Colors.transparent, // Make the AppBar background transparent
             ),
@@ -34,7 +38,7 @@ class ProfilePage extends StatelessWidget {
           Container(
             width: double.infinity,
             color: Colors.blue,
-            padding: EdgeInsets.symmetric(vertical: 40),
+            padding: const EdgeInsets.symmetric(vertical: 40),
             child: Stack(
               alignment: Alignment.center,
               clipBehavior: Clip.none,
@@ -44,7 +48,7 @@ class ProfilePage extends StatelessWidget {
                     Container(
                       width: 80,
                       height: 80,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                           image: NetworkImage('https://via.placeholder.com/150'),
@@ -52,8 +56,8 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 10),
-                    Text(
+                    const SizedBox(height: 10),
+                    const Text(
                       'John Doe',
                       style: TextStyle(
                         color: Colors.white,
@@ -79,10 +83,10 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
 
           // Profile information (email, phone number)
-          Column(
+          const Column(
             children: [
               Row(
                 children: [
@@ -109,7 +113,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
 
           // Menu Section with buttons on the same row
           Padding(
@@ -121,21 +125,21 @@ class ProfilePage extends StatelessWidget {
                   width: 150,
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Edit Profile'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 241, 241, 241),
                     ),
+                    child: Text('Edit Profile'),
                   ),
                 ),
-                SizedBox(width: 20),  // Space between buttons
+                const SizedBox(width: 20),  // Space between buttons
                 SizedBox(
                   width: 150,
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Log Out'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 241, 241, 241),
                     ),
+                    child: Text('Log Out'),
                   ),
                 ),
               ],
